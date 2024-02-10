@@ -19,6 +19,8 @@ with st.form("my_form"):
   description = st.text_area('Introduce the company details')
 
   uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+
+  st.divider()
   
   submitted = st.form_submit_button("Submit")
   if submitted:
