@@ -13,8 +13,10 @@ st.header("Deepmind Analysis")
 
 st.markdown("###")
 
+Insights = "Hello"
+
 with st.form("my_form"):
-  symptoms = st.text_input('Introduce the company details')
+  description = st.text_input('Introduce the company details')
 
   uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
   
@@ -27,7 +29,7 @@ if flow:
         model="gpt-4-1106-preview",
         messages=[
           {"role": "system", "content": "You are a worldwide renounce marketer, you can manage the best marketing campaigns and understand client needs when a user gives you a company description and data to interpret."},
-          {"role": "user", "content": f"Write a marketing report with the next structure [Relation between the Company product and the new category found][A marketing strategy for LinkedIn, Instagram, Twitter and TikTok, based in the insights gained][Microinfluencers er social media network that can help the company]"}
+          {"role": "user", "content": f"Write a marketing report with the next structure [Relation between the Company product and the new category found][A marketing strategy for LinkedIn, Instagram, Twitter, and TikTok, based in the insights gained][Microinfluencers er social media network that can help the company]  Company Description: {description}  Insights Gained: {Insights}"}
         ]
       )
 
