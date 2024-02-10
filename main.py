@@ -16,7 +16,7 @@ st.markdown("###")
 Insights = "Hello"
 
 with st.form("my_form"):
-  description = st.text_input('Introduce the company details')
+  description = st.text_area('Introduce the company details')
 
   uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
   
