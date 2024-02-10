@@ -11,6 +11,8 @@ flow = False
 
 st.header("Deepmind Analysis")
 
+st.divider()
+
 with st.form("my_form"):
   symptoms = st.text_input('Introduce the company details')
 
