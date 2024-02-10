@@ -20,7 +20,7 @@ with st.form("my_form"):
 
   uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 
-  st.divider()
+  st.markdown("###")
   
   submitted = st.form_submit_button("Submit")
   if submitted:
